@@ -19,14 +19,6 @@ public abstract class Card {
      *
      * @return a String representation of a card. Could be an UNO card, a regular playing card etc.
      */
-    
-    private String rank;
-    private String suit;
-    
-    public Card(String rank, String suit){
-        this.rank = rank;
-        this.suit = suit;
-    }
     @Override
     public abstract String toString();
 
