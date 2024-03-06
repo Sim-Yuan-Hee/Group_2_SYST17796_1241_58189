@@ -10,6 +10,8 @@ package ca.sheridancollege.project;
  *
  * @author dancye
  * @author Paul Bonenfant Jan 2020
+  * @author Sim Yuan Hee
+ * March 5, 2024
  */
 public abstract class Player {
 
