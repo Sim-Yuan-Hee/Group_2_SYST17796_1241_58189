@@ -14,6 +14,8 @@ import java.util.Collections;
  *
  * @author dancye
  * @author Paul Bonenfant Jan 2020
+ * @author Sim Yuan Hee
+ * March 5, 2024
  */
 public class GroupOfCards {
 
