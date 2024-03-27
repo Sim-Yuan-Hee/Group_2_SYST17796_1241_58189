@@ -1,0 +1,31 @@
+1.	Project Background and Description
+Elaborate on the game you chose and the Description provided in Deliverable 1 by providing more detail on the exact scope of your project (i.e. “the game will terminate after four rounds, giving each player a total score”).
+
+We have chose to create a card game called "War". The game will be restricted to 2 players. The main player can choose to end the game after a certain 
+number of rounds or when a player has all the card. Each player will be assigned 26 cards, and they will have two groups of cards. One group of cards 
+is what they were initially assigned and will be used to play, and another group is what they taken from the other player. After the playing group of 
+cards are finished, the taken group of cards will be shuffled and played. After the first round, The accumulated score of each 
+player will be printed along with any message or prompt. so it appears to be shown all the time. 
+
+
+2.	Design Considerations
+Describe the Class Diagram you delivered above (it should be descried as Figure 1 or Figure x if you have more than one Figure), explaining the associations and multiplicities depicted.
+Comment on each of the following as it pertains to the class groupings you have decided upon and if you have included methods, modifiers and return types, comment on those here as well. You may wish to describe any data structures you wish to use (i.e an enumeration) when you are explaining your design choices. Be specific for full credit.
+•	Encapsulation
+
+•	Delegation
+
+•	Cohesion
+
+•	Coupling
+
+•	Inheritance
+    Card objects will inherit properties and methods of card abstract class while having their own values for the attributes. 
+    For example, a cards has value and suit, so a card object could be "10 of Hearts"
+
+•	Aggregation
+    An example of aggregation here is group of cards. Cards will still be cards even when they are not grouped. 
+    Objects of cards will be added into arraylist of "groupofcards".
+
+•	Composition
+    A War game must be made up of 2 players. Players will not be players if there is no game.
