@@ -14,13 +14,31 @@ package ca.sheridancollege.project;
  * March 5, 2024
  */
 public abstract class Card {
-    //default modifier for child classes
+    
+    private int rank;
+    private String description;
 
-    /**
-     * Students should implement this method for their specific children classes
-     *
-     * @return a String representation of a card. Could be an UNO card, a regular playing card etc.
-     */
+    public int getRank() {
+        return rank;
+    }
+
+    public void setRank(int rank) {
+        this.rank = rank;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public Card(int rank, String description) {
+        this.rank = rank;
+        this.description = description;
+    }
+    
     @Override
     public abstract String toString();
 

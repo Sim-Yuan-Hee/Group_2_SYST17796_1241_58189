@@ -46,6 +46,10 @@ public class WarGame extends Game
         Scanner keyboard = new Scanner(System.in);
         String playerName = keyboard.nextLine();
         
+        CardFactory cf = new CardFactory();
         
+        Card testCard = cf.getCard("Poker");
+       
+        System.out.println(testCard);
     }
 }
