@@ -50,6 +50,8 @@ public class WarGame extends Game
         
         Card testCard = cf.getCard("Poker");
        
-        System.out.println(testCard);
+        System.out.println(testCard.getRank());
+        System.out.println(testCard.getDescription());
+        
     }
 }
