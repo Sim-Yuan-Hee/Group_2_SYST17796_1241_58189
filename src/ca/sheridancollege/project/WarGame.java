@@ -8,7 +8,7 @@ import java.util.Scanner;
 
 /**
  *
- * @author NathanSim
+ * @author Sim Yuan Hee
  */
 
 //I am not sure why we are given abstract classes to start with...
@@ -42,16 +42,25 @@ public class WarGame extends Game
                 + "player faces down three cards and face-up one card and the player having the higher card wins all the cards. This game continues "
                 + "until a player has won all the 52 cards or a specified number of rounds are completed.");
         
-        System.out.println("Please enter your name: ");
+        System.out.println("Player 1, please enter your name: ");
         Scanner keyboard = new Scanner(System.in);
-        String playerName = keyboard.nextLine();
+        String player1Name = keyboard.nextLine();
+        
+        System.out.println("Player 2, please enter your name: ");
+        Scanner keyboard2 = new Scanner(System.in);
+        String player2Name = keyboard.nextLine();
         
         CardFactory cf = new CardFactory();
         
         Card testCard = cf.getCard("Poker");
        
-        System.out.println(testCard.getRank());
-        System.out.println(testCard.getDescription());
+//        System.out.println(testCard.getRank());
+//        System.out.println(testCard.getDescription());
         
+        GroupOfPokers gp1 = new GroupOfPokers(26);
+        GroupOfPokers gp2 = new GroupOfPokers(26);
+        
+        //2 groups of cards...but need to make sure each unique card only repeat 4 times, because 13(jack, 10, 9...) x 4 = 52, achieve with cardfactory?
+        //no cardfactory only creates 1 card, new class?
     }
 }

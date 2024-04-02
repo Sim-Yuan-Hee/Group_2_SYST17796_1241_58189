@@ -13,4 +13,6 @@ public class GroupOfPokers extends GroupOfCards{
     public GroupOfPokers(int size) {
         super(size);
     }
+    
+    
 }

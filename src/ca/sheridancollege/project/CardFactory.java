@@ -40,10 +40,8 @@ public class CardFactory{
                 default:
                     card = new Poker(rank, rank + " of " + suit);
                     break;
-            }
-            
-        }
-        
+            }       
+        } 
         return card;
     }   
 }
