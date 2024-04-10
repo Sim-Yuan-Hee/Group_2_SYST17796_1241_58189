@@ -44,16 +44,29 @@ public class WarGame extends Game
                 + "player faces down three cards and face-up one card and the player having the higher card wins all the cards. This game continues "
                 + "until a player has won all the 52 cards or a specified number of rounds are completed.");
         
-        System.out.println("Player 1, please enter your name: ");
-        Scanner keyboard = new Scanner(System.in);
-        String player1Name = keyboard.nextLine();
-        
-        System.out.println("Player 2, please enter your name: ");
-        Scanner keyboard2 = new Scanner(System.in);
-        String player2Name = keyboard.nextLine();
-        
-        //Create players?
-        
+        while (true)
+        {
+            System.out.println("Player 1, please enter your name: ");
+            Scanner keyboard = new Scanner(System.in);
+            String player1Name = keyboard.nextLine();
+
+            System.out.println("Player 2, please enter your name: ");
+            Scanner keyboard2 = new Scanner(System.in);
+            String player2Name = keyboard2.nextLine();
+
+            if (player1Name == null ? player2Name == null : player1Name.equals(player2Name))
+            {
+                System.out.println("Player names not unique, please try again");
+            }
+            else
+            {
+                System.out.println("Player names valid");
+                Player_WarGame player1 = new Player_WarGame(player1Name);
+                Player_WarGame player2 = new Player_WarGame(player2Name);  
+                System.out.println("Player names valid, please continue");
+                break;
+            }
+        }
         
         CardFactory cf = new CardFactory();
         
@@ -70,8 +83,8 @@ public class WarGame extends Game
         
         System.out.println("Please enter the number of rounds you agreed on: ");
         Scanner kb_numOfRounds = new Scanner(System.in);
-        int numOfRounds = keyboard.nextInt();
-        
+        int numOfRounds = kb_numOfRounds.nextInt();
+        System.out.println("You have agreed to end the game after " + numOfRounds + " rounds.");
         
     }   
 }
