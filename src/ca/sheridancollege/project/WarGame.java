@@ -50,6 +50,8 @@ public class WarGame extends Game
         Scanner keyboard2 = new Scanner(System.in);
         String player2Name = keyboard.nextLine();
         
+        //Create players?
+        
         CardFactory cf = new CardFactory();
         
         Card testCard = cf.getCard("Poker");
