@@ -20,6 +20,8 @@ public class WarGame extends Game
         super(name);
     }
 
+    private int score = 0;
+    
     @Override
     public void play() {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
@@ -52,6 +54,7 @@ public class WarGame extends Game
         
         //Create players?
         
+        
         CardFactory cf = new CardFactory();
         
         Card testCard = cf.getCard("Poker");
@@ -64,5 +67,11 @@ public class WarGame extends Game
         
         //2 groups of cards...but need to make sure each unique card only repeat 4 times, because 13(jack, 10, 9...) x 4 = 52, achieve with cardfactory?
         //no cardfactory only creates 1 card, new class?
-    }
+        
+        System.out.println("Please enter the number of rounds you agreed on: ");
+        Scanner kb_numOfRounds = new Scanner(System.in);
+        int numOfRounds = keyboard.nextInt();
+        
+        
+    }   
 }
