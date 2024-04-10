@@ -23,15 +23,34 @@ public class CardFactory{
             String suits [] = {"Hearts", "Diamonds", "Spades", "Clubs"};
             
             for (String suit : suits) {
-                for (int rank = 0; rank <=13; rank++)
+                for (int rank = 2; rank <= 14; rank++)
                 {
-                    card = new Poker(rank, suit + " of " + suit);
+                    switch (rank) {
+                        case 11:
+                            card = new Poker(rank, "Jack" + " of " + suit);
+                            break;
+                        case 12:
+                            card = new Poker(rank, "Queen" + " of " + suit);
+                            break;
+                        case 13:
+                            card = new Poker(rank, "King" + " of " + suit);
+                            break;
+                        case 14:
+                            card = new Poker(rank, "Ace" + " of " + suit);
+                            break;
+                        default:
+                            card = new Poker(rank, rank + " of " + suit);
+                            break;
+                    }   
+                    cards_52.add(card);
                 }
             }    
         } 
         
-        for (Card c : cards_52)
-            System.out.println(c);
+//        for (Card c : cards_52)
+//        {
+//            System.out.println(c.getDescription());
+//        }
         
         return cards_52;
     }   

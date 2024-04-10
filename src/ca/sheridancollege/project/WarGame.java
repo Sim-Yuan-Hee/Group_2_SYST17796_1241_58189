@@ -69,8 +69,9 @@ public class WarGame extends Game
         }
         
         CardFactory cf = new CardFactory();
+        cf.get52Cards("Poker");
+//        Card testCard = cf.getCard("Poker");
         
-        Card testCard = cf.getCard("Poker");
        
 //        System.out.println(testCard.getRank());
 //        System.out.println(testCard.getDescription());
